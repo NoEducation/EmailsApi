@@ -14,6 +14,6 @@ namespace GmailAPI.SmptHelper
             Console.ReadLine();
         }
 
-        public static ImapClient CreateClient() => new ImapClient("imap.gmail.com", "FootballNeighborhoodApp", "qpaeogsxkvxdzpjh", AuthMethods.Login, 993, true);
+        public static ImapClient CreateClient() => new ImapClient("imap.gmail.com", "FootballNeighborhoodApp", "*", AuthMethods.Login, 993, true);
     }
 }
