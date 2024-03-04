@@ -1,4 +1,5 @@
 ﻿using GmailAPI.APIHelper;
+using GmailAPI.SmptHelper;
 using Google.Apis.Gmail.v1;
 using Google.Apis.Gmail.v1.Data;
 using System;
@@ -8,16 +9,19 @@ using System.Linq;
 
 namespace GmailAPI
 {
-    class Program
+    public class Program
     {
-        s
         //Drugi sposob
         static void Main(string[] args)
         {
+            using (var client = ImapClientHelper.CreateClient())
+            {
+                client.ReadFirstEmail();
+            }
+
             try
             {
                 List<GmailMail> MailLists = GetAllEmails(Convert.ToString(ConfigurationManager.AppSettings["HostAddress"]));
-
             }
             catch (Exception ex)
             {

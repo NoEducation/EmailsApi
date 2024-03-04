@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AE.Net.Mail, Version=1.7.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AE.Net.Mail.1.7.10.0\lib\net45\AE.Net.Mail.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
     </Reference>
@@ -69,10 +72,12 @@
     <Compile Include="APIHelper\GmailMail.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmptHelper\ImapClientHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
